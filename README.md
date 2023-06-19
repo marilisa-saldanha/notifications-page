@@ -15,8 +15,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL]()
-- [Live Site URL]()
+- [Solution URL](https://www.frontendmentor.io/solutions/notifications-page-using-html-css-flexbox-and-javascript-7fduE2THGq)
+- [Live Site URL](https://marilisa-saldanha.github.io/notifications-page/)
 
 ## My process
 
