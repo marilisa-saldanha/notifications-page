@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+  /* Colors */
+  /* Primary */
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.container {
+  background-color: var(--white);
+  min-height: 100vh;
+}
+
+.container .notifications {
+  display: flex;
+  padding: 0 0 1rem 0;
+  justify-content: space-between;
+}
+
+.container .notifications div {
+  display: flex;
+  gap: .7rem;
+}
+
+.container .notifications p {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.container .notifications span {
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: 800;
+  font-size: .9rem;
+  padding:  0 .6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: .4rem;
+}
+
+.container .notifications #btnAllRead {
+  color: var(--dark-grayish-blue);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: .9rem;
+  position: absolute;
+  right: 1rem;
+  top: 1.344rem;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.container .notifications #btnAllRead:hover {
+  color: var(--blue);
+}
+
+.container .messages {
+  display: flex;
+  gap: .75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container .messages .imageCommented {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.container .messages .imageCommented img {
+  cursor: pointer;
+}
+
+.notRead {
+  background-color: var(--very-light-grayish-blue);
+  border-radius: .5rem;
+}
+
+.container .messages img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.container .messages div {
+  display: flex;
+  flex-direction: column;
+  font-size: .89rem;
+  gap: .2rem;
+  letter-spacing: .02rem;
+}
+
+.container .messages div p {
+  color: var(--dark-grayish-blue);
+}
+
+.container .messages div .circle {
+  width: .5rem;
+  height: 1rem;
+  margin-left: .2rem;
+  padding-top: .4rem;
+  visibility: visible;
+}
+
+.container .messages div .name {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.container .messages div .post {
+  color: var(--dark-grayish-blue);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.container .messages div .name:hover, 
+.container .messages div .post:hover {
+  color: var(--blue);
+}
+
+.container .messages div .date {
+  color: var(--grayish-blue);
+  font-size: .85rem;
+}
+
+.container .messages div .circle {
+  list-style-type: circle;
+}
+
+.container .messages div .privateMessage {
+  text-decoration: none;
+  color: var(--dark-grayish-blue);
+  font-size: .9rem;
+  padding: 1rem;
+  border: .063rem solid var(--light-grayish-blue-2);
+  border-radius: .25rem;
+  margin-top: .6rem;
+  cursor: pointer;
+}
+
+.container .messages div .privateMessage:hover {
+  background-color: var(--light-grayish-blue-2);
+}
+
+footer {
+  color: var(--very-dark-blue);
+  text-align: center;
+  font-size: .9rem;
+}
+
+.attribution a {
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.attribution a:hover {
+  color: var(--red);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--very-light-grayish-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    width: 43.75rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+  }
+
+  .container .notifications p {
+    font-size: 1.3rem;
+  }
+
+  .container .notifications #btnAllRead {
+    font-size: .95rem;
+    position: static;
+  }
+
+  .container .messages img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .container .messages div {
+    font-size: .95rem;
+    gap: .2rem;
+    letter-spacing: .01rem;
+  }
+
+  .container .messages div .date {
+    font-size: .975rem;
+  }
+
+  .container .messages div .privateMessage {
+    font-size: .95rem;
+  }
+  
+  footer {
+    font-size: .95rem;
+  }
+}
